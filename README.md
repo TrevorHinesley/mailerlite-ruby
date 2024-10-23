@@ -1,3 +1,13 @@
+# Fork Notes
+
+This is forked for no other reason than to avoid the `Dotenv` requirement that causes the gem
+to crap and die in a Rails app unless you set the API key via an environment variable.
+
+This fork will let you set it using `config/initializers` or will try to pull from `Rails.credentials`
+or lastly default to pulling from `ENV`.
+
+
+
 <a href="https://www.mailerlite.com"><img src="https://app.mailerlite.com/assets/images/logo-color.png" width="200px"/></a>
 
 # MailerLite Ruby SDK
