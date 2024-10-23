@@ -25,7 +25,7 @@ module MailerLite
 
     def fetch_api_token
       # Check for Rails credentials if Rails is defined
-      if defined?(Rails) && Rails.application.credentials.respond_to?(:mailer_lite)
+      if defined?(Rails) && Rails.application.credentials&.mailer_lite&[:api_token]
         Rails.application.credentials.mailer_lite[:api_token]
       else
         # Fall back to ENV variable
